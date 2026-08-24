@@ -2,23 +2,403 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="personal.css">
-    <title>Technology Blog</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Growth | Miller Journal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="personal.css?v=2.0.0"
+    >
 </head>
-<body>
-    <header>
-        <h1>My Personal Blog</h1>
+
+<body class="article-page">
+
+    <div id="reading-progress" class="reading-progress"></div>
+
+
+    <header class="site-header">
+
+        <div class="nav-shell">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-mark">
+                    MJ
+                </span>
+
+                <div>
+                    <strong>MILLER JOURNAL</strong>
+                    <small>TECH · TRAVEL · GROWTH</small>
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="tech.html">
+                    Tech
+                </a>
+
+                <a href="travel.html">
+                    Travel
+                </a>
+
+                <a href="personal.html" class="active">
+                    Growth
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    id="theme-toggle"
+                    class="icon-button"
+                    type="button"
+                >
+                    ◐
+                </button>
+
+                <button
+                    id="surprise-button"
+                    class="nav-cta"
+                    type="button"
+                >
+                    Surprise Me
+                </button>
+
+            </div>
+
+        </div>
+
     </header>
+
+
     <main>
-        <article>
-            <h2>Reflections on Life's Journey</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
-        </article>
-        <!-- May add more personal blog posts here -->
+
+        <section class="article-hero">
+
+            <div class="content-shell article-hero-grid">
+
+                <div class="article-hero-copy">
+
+                    <span class="article-label">
+                        PERSONAL GROWTH
+                    </span>
+
+                    <h1>
+                        Better systems. Better days.
+                    </h1>
+
+                    <p>
+                        Productivity is useful when it makes life
+                        easier, not when it turns every minute into
+                        another metric. This section focuses on
+                        practical ways to work, learn, and improve.
+                    </p>
+
+                </div>
+
+
+                <div class="article-hero-image">
+
+                    <img
+                        src="images/productivity-desk.jpg"
+                        alt="Open notebook on a productivity desk"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="article-list">
+
+            <div class="content-shell">
+
+
+                <article
+                    id="focus"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/pomodoro-timer.jpg"
+                        alt="Hourglass representing focused time"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        FOCUS
+                    </span>
+
+                    <h2>
+                        The Focus System That Beats
+                        Waiting for Motivation
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>5 min read</span>
+                        <span>Productivity</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Motivation is useful, but it is
+                            unreliable. Some days it arrives before
+                            the work starts. Other days it shows up
+                            after progress has already begun.
+                        </p>
+
+                        <p>
+                            A better system lowers the effort
+                            required to start. Decide the task,
+                            remove obvious distractions, choose a
+                            short period of focused time, and begin
+                            before negotiating with yourself.
+                        </p>
+
+
+                        <div class="article-callout">
+                            Starting is often the hardest part of
+                            work because starting requires a
+                            decision. Systems make that decision in
+                            advance.
+                        </div>
+
+
+                        <p>
+                            The Pomodoro technique works for some
+                            people because it creates a visible
+                            finish line. The exact timer matters
+                            less than the agreement: for this block
+                            of time, there is only one job.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    id="systems"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/success-mountain.jpg"
+                        alt="Person standing on a mountain at sunrise"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        SYSTEMS
+                    </span>
+
+                    <h2>
+                        Goals Point. Systems Move.
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>6 min read</span>
+                        <span>Consistency</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Goals are useful because they provide
+                            direction. The problem begins when the
+                            goal becomes the entire plan.
+                        </p>
+
+                        <p>
+                            Wanting to learn a new skill does not
+                            create time to practice it. Wanting to
+                            improve fitness does not create a
+                            training schedule. Wanting to build
+                            something does not decide what gets done
+                            tonight.
+                        </p>
+
+
+                        <div class="article-inline-grid">
+
+                            <img
+                                src="images/idea-lightbulb.jpg"
+                                alt="Glowing idea light"
+                            >
+
+                            <img
+                                src="images/gradient-waves.jpg"
+                                alt="Abstract colorful gradient"
+                            >
+
+                        </div>
+
+
+                        <p>
+                            Systems turn an intention into a repeated
+                            action. Once the repeated action exists,
+                            progress no longer depends on constantly
+                            deciding whether today is a good day to
+                            begin.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    id="workspace"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/workspace.jpg"
+                        alt="Laptop and notebook workspace"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        ENVIRONMENT
+                    </span>
+
+                    <h2>
+                        Your Workspace Is Part of Your Workflow
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>4 min read</span>
+                        <span>Environment</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            People often treat focus as a personality
+                            trait. In reality, the environment around
+                            a task can make concentration easier or
+                            harder before willpower ever becomes
+                            involved.
+                        </p>
+
+                        <p>
+                            A workspace does not need to be perfect.
+                            It needs to make the next useful action
+                            obvious.
+                        </p>
+
+
+                        <div class="article-inline-grid">
+
+                            <img
+                                src="images/coffee-latte.jpg"
+                                alt="Coffee beside a workspace"
+                            >
+
+                            <img
+                                src="images/dark-texture.jpg"
+                                alt="Minimal dark texture"
+                            >
+
+                        </div>
+
+
+                        <div class="article-callout">
+                            Reduce the number of decisions between
+                            sitting down and doing the work.
+                        </div>
+
+
+                        <p>
+                            Put frequently used tools where they are
+                            easy to reach. Remove distractions that
+                            constantly request attention. Open the
+                            application you need before starting the
+                            session. Small details can create a
+                            noticeable difference.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
-    <footer>
-        © 2024 My Personal Blog
+
+
+    <footer class="site-footer">
+
+        <div class="content-shell footer-inner">
+
+            <div>
+                <strong>MILLER JOURNAL</strong>
+                <p>Progress without pretending every day is perfect.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech</a>
+                <a href="travel.html">Travel</a>
+            </div>
+
+            <p class="creator-line">
+                Created &amp; developed by
+                <strong>Letherius Miller</strong>
+                ·
+                <span id="current-year"></span>
+            </p>
+
+        </div>
+
     </footer>
+
+
+    <button
+        id="back-to-top"
+        class="back-to-top"
+        type="button"
+    >
+        ↑
+    </button>
+
+
+    <script src="script.js?v=2.0.0"></script>
+
 </body>
 </html>
