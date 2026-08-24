@@ -2,23 +2,395 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="travel.css">
-    <title>Technology Blog</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Travel | Miller Journal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="travel.css?v=2.0.0"
+    >
 </head>
-<body>
-    <header>
-        <h1>Travel Adventures</h1>
+
+<body class="article-page">
+
+    <div id="reading-progress" class="reading-progress"></div>
+
+
+    <header class="site-header">
+
+        <div class="nav-shell">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-mark">
+                    MJ
+                </span>
+
+                <div>
+                    <strong>MILLER JOURNAL</strong>
+                    <small>TECH · TRAVEL · GROWTH</small>
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="tech.html">
+                    Tech
+                </a>
+
+                <a href="travel.html" class="active">
+                    Travel
+                </a>
+
+                <a href="personal.html">
+                    Growth
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    id="theme-toggle"
+                    class="icon-button"
+                    type="button"
+                >
+                    ◐
+                </button>
+
+                <button
+                    id="surprise-button"
+                    class="nav-cta"
+                    type="button"
+                >
+                    Surprise Me
+                </button>
+
+            </div>
+
+        </div>
+
     </header>
+
+
     <main>
-        <article>
-            <h2>Exploring Kyoto: Temples, Tea, and Tranquility</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
-        </article>
-        <!-- May add more travel-related blog posts here -->
+
+        <section class="article-hero">
+
+            <div class="content-shell article-hero-grid">
+
+                <div class="article-hero-copy">
+
+                    <span class="article-label">
+                        TRAVEL
+                    </span>
+
+                    <h1>
+                        Go somewhere worth remembering.
+                    </h1>
+
+                    <p>
+                        Not every trip needs a packed itinerary.
+                        Travel gets better when the destination,
+                        pace, food, and small moments all get room
+                        to matter.
+                    </p>
+
+                </div>
+
+
+                <div class="article-hero-image">
+
+                    <img
+                        src="images/hero-travel.jpg"
+                        alt="Traveler watching a mountain sunrise"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="article-list">
+
+            <div class="content-shell">
+
+
+                <article
+                    id="kyoto"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/kyoto-temple.jpg"
+                        alt="Japanese pagoda and Mount Fuji"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        JAPAN
+                    </span>
+
+                    <h2>
+                        Kyoto Beyond the Checklist
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>6 min read</span>
+                        <span>Culture</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Kyoto is full of places people recognize
+                            before they ever arrive: temples,
+                            shrines, bamboo paths, tea houses, and
+                            traditional streets. That makes it easy
+                            to turn a visit into a race from landmark
+                            to landmark.
+                        </p>
+
+                        <p>
+                            The better approach is slower. Choose a
+                            few places, walk more, and allow the city
+                            between the attractions to become part
+                            of the trip.
+                        </p>
+
+
+                        <div class="article-inline-grid">
+
+                            <img
+                                src="images/tea-ceremony.jpg"
+                                alt="Japanese green tea"
+                            >
+
+                            <img
+                                src="images/travel-map.jpg"
+                                alt="Travel map with camera"
+                            >
+
+                        </div>
+
+
+                        <div class="article-callout">
+                            The best travel memories are often the
+                            moments that never appeared on the
+                            itinerary.
+                        </div>
+
+
+                        <p>
+                            A quiet tea, an unfamiliar side street,
+                            or a meal discovered by accident may not
+                            look important while it is happening.
+                            Those moments are often what remain after
+                            the photos and schedules are forgotten.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    id="weekend"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/adventure-hike.jpg"
+                        alt="Person hiking in mountains"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        WEEKEND TRAVEL
+                    </span>
+
+                    <h2>
+                        Stop Overplanning Weekend Trips
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>4 min read</span>
+                        <span>Adventure</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            A short trip does not have to feel
+                            rushed. The problem is usually not the
+                            amount of time available. It is trying to
+                            fit an entire vacation into two days.
+                        </p>
+
+                        <p>
+                            Pick one major experience each day.
+                            Everything else should support it rather
+                            than compete with it.
+                        </p>
+
+
+                        <div class="article-inline-grid">
+
+                            <img
+                                src="images/golden-gate.jpg"
+                                alt="Golden Gate Bridge at sunset"
+                            >
+
+                            <img
+                                src="images/coffee-latte.jpg"
+                                alt="Coffee on a wooden table"
+                            >
+
+                        </div>
+
+
+                        <p>
+                            That leaves space for a late breakfast,
+                            an unexpected neighborhood, or an extra
+                            hour somewhere you did not expect to
+                            enjoy.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article
+                    id="coast"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/beach-sunset.jpg"
+                        alt="Tropical beach during sunset"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        COAST
+                    </span>
+
+                    <h2>
+                        Let the Sunset Set the Schedule
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>5 min read</span>
+                        <span>Slow Travel</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Some destinations are better experienced
+                            around a moment instead of an attraction.
+                            On the coast, sunset can be that moment.
+                        </p>
+
+                        <p>
+                            Build the afternoon so there is nowhere
+                            urgent to be as the light starts to
+                            change. Find the water early, eat later,
+                            and let the evening begin naturally.
+                        </p>
+
+
+                        <div class="article-callout">
+                            A good itinerary tells you where to go.
+                            A great one knows when to stop moving.
+                        </div>
+
+
+                        <img
+                            src="images/nature-leaves.jpg"
+                            alt="Green leaves"
+                            class="article-feature-image"
+                        >
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
-    <footer>
-        © 2024 My Personal Blog
+
+
+    <footer class="site-footer">
+
+        <div class="content-shell footer-inner">
+
+            <div>
+                <strong>MILLER JOURNAL</strong>
+                <p>Travel farther. Notice more.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tech.html">Tech</a>
+                <a href="personal.html">Growth</a>
+            </div>
+
+            <p class="creator-line">
+                Created &amp; developed by
+                <strong>Letherius Miller</strong>
+                ·
+                <span id="current-year"></span>
+            </p>
+
+        </div>
+
     </footer>
+
+
+    <button
+        id="back-to-top"
+        class="back-to-top"
+        type="button"
+    >
+        ↑
+    </button>
+
+
+    <script src="script.js?v=2.0.0"></script>
+
 </body>
 </html>
