@@ -2,23 +2,430 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tech.css">
-    <title>Technology Blog</title>
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Technology | Miller Journal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="tech.css?v=2.0.0"
+    >
 </head>
-<body>
-    <header>
-        <h1>Technology Trends and Reviews</h1>
+
+<body class="article-page">
+
+    <div id="reading-progress" class="reading-progress"></div>
+
+
+    <header class="site-header">
+
+        <div class="nav-shell">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-mark">
+                    MJ
+                </span>
+
+                <div>
+                    <strong>MILLER JOURNAL</strong>
+                    <small>TECH · TRAVEL · GROWTH</small>
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="tech.html" class="active">
+                    Tech
+                </a>
+
+                <a href="travel.html">
+                    Travel
+                </a>
+
+                <a href="personal.html">
+                    Growth
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    id="theme-toggle"
+                    class="icon-button"
+                    type="button"
+                >
+                    ◐
+                </button>
+
+                <button
+                    id="surprise-button"
+                    class="nav-cta"
+                    type="button"
+                >
+                    Surprise Me
+                </button>
+
+            </div>
+
+        </div>
+
     </header>
+
+
     <main>
-        <article>
-            <h2>The Rise of Edge Computing: What You Need to Know</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. ...</p>
-        </article>
-        <!-- May add more tech-related blog posts here -->
+
+        <section class="article-hero">
+
+            <div class="content-shell article-hero-grid">
+
+                <div class="article-hero-copy">
+
+                    <span class="article-label">
+                        TECHNOLOGY
+                    </span>
+
+                    <h1>
+                        The systems shaping what comes next.
+                    </h1>
+
+                    <p>
+                        Computing is moving faster, closer, and
+                        deeper into everyday life. This section
+                        explores the infrastructure, software,
+                        security, and ideas behind that shift.
+                    </p>
+
+                </div>
+
+
+                <div class="article-hero-image">
+
+                    <img
+                        src="images/hero-code.jpg"
+                        alt="Modern laptop with programming code"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="article-list">
+
+            <div class="content-shell">
+
+
+                <!-- EDGE COMPUTING -->
+
+                <article
+                    id="edge-computing"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/ai-brain.jpg"
+                        alt="AI circuitry visualization"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        INFRASTRUCTURE
+                    </span>
+
+                    <h2>
+                        The Rise of Edge Computing:
+                        Why Distance Suddenly Matters
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>8 min read</span>
+                        <span>Technology</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Cloud computing changed technology by
+                            making enormous amounts of computing
+                            power available without requiring every
+                            organization to own the hardware. Edge
+                            computing takes that same idea and asks a
+                            different question: what happens when the
+                            work cannot afford to travel very far?
+                        </p>
+
+                        <p>
+                            Instead of sending every request to a
+                            distant data center, edge systems process
+                            some data closer to the device, user, or
+                            physical location where it is created.
+                            That can reduce latency, limit unnecessary
+                            network traffic, and allow applications to
+                            react much faster.
+                        </p>
+
+
+                        <div class="article-callout">
+                            The cloud did not disappear.
+                            The edge simply gives applications
+                            another place to think.
+                        </div>
+
+
+                        <div class="article-inline-grid">
+
+                            <img
+                                src="images/pattern-dots.jpg"
+                                alt="Abstract digital network pattern"
+                            >
+
+                            <img
+                                src="images/city-lights.jpg"
+                                alt="Connected city skyline at night"
+                            >
+
+                        </div>
+
+
+                        <p>
+                            The most interesting part is that edge
+                            computing is not limited to one industry.
+                            Manufacturing equipment, autonomous
+                            systems, retail locations, hospitals,
+                            smart cities, and even consumer devices
+                            can benefit when computing happens closer
+                            to where decisions are needed.
+                        </p>
+
+                        <p>
+                            For developers and cloud engineers, this
+                            means architecture is becoming more
+                            distributed. The question is no longer
+                            simply where an application runs. It is
+                            which parts should run in the cloud, which
+                            belong at the edge, and how those pieces
+                            stay secure and synchronized.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- AI EDGE -->
+
+                <article
+                    id="ai-edge"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/hero-tech-bg.jpg"
+                        alt="Connected blue technology network"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        ARTIFICIAL INTELLIGENCE
+                    </span>
+
+                    <h2>
+                        AI Is Leaving the Data Center
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>7 min read</span>
+                        <span>AI</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Many people still picture artificial
+                            intelligence as something that happens
+                            inside huge remote systems. Increasingly,
+                            smaller AI models are being placed
+                            directly on phones, laptops, cameras,
+                            vehicles, and specialized hardware.
+                        </p>
+
+                        <p>
+                            That shift changes privacy, performance,
+                            reliability, and cost. A device that can
+                            process information locally does not
+                            always need to send sensitive data across
+                            a network just to make a simple decision.
+                        </p>
+
+
+                        <div class="article-inline-grid">
+
+                            <img
+                                src="images/idea-lightbulb.jpg"
+                                alt="Glowing light bulb"
+                            >
+
+                            <img
+                                src="images/workspace.jpg"
+                                alt="Laptop and workspace"
+                            >
+
+                        </div>
+
+
+                        <p>
+                            The future is likely to be hybrid.
+                            Massive models will continue to live in
+                            powerful data centers, while smaller
+                            models handle immediate tasks closer to
+                            users. The interesting engineering work
+                            will happen in deciding what belongs
+                            where.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SECURITY -->
+
+                <article
+                    id="security"
+                    class="long-article"
+                >
+
+                    <img
+                        src="images/night-sky.jpg"
+                        alt="Stars above a dark mountain landscape"
+                        class="article-feature-image"
+                    >
+
+                    <span class="article-label">
+                        SECURITY
+                    </span>
+
+                    <h2>
+                        The Invisible Systems We Trust Every Day
+                    </h2>
+
+                    <div class="article-meta">
+                        <span>5 min read</span>
+                        <span>Internet Architecture</span>
+                    </div>
+
+
+                    <div class="article-body">
+
+                        <p>
+                            Opening a website feels instant, but
+                            behind that simple action is a chain of
+                            systems making decisions on your behalf.
+                            DNS resolution, routing, encryption,
+                            certificates, caching, and content
+                            delivery all have to work together.
+                        </p>
+
+                        <p>
+                            Most people only notice the architecture
+                            when something fails. A slow lookup,
+                            broken certificate, routing problem, or
+                            unavailable service can turn a familiar
+                            website into an error message.
+                        </p>
+
+                        <div class="article-callout">
+                            Good infrastructure often feels invisible.
+                            Its success is measured by how rarely
+                            users need to think about it.
+                        </div>
+
+                        <p>
+                            Understanding those layers makes
+                            troubleshooting less mysterious because
+                            a website is no longer one thing. It is a
+                            collection of systems depending on one
+                            another.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
     </main>
-    <footer>
-        © 2024 My Personal Blog
+
+
+    <footer class="site-footer">
+
+        <div class="content-shell footer-inner">
+
+            <div>
+                <strong>MILLER JOURNAL</strong>
+                <p>Technology that makes the invisible visible.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="travel.html">Travel</a>
+                <a href="personal.html">Growth</a>
+            </div>
+
+            <p class="creator-line">
+                Created &amp; developed by
+                <strong>Letherius Miller</strong>
+                ·
+                <span id="current-year"></span>
+            </p>
+
+        </div>
+
     </footer>
+
+
+    <button
+        id="back-to-top"
+        class="back-to-top"
+        type="button"
+    >
+        ↑
+    </button>
+
+
+    <script src="script.js?v=2.0.0"></script>
+
 </body>
 </html>
