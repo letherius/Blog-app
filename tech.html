@@ -25,407 +25,424 @@
 
     <link
         rel="stylesheet"
-        href="tech.css?v=2.0.0"
+        href="style.css?v=3.0.0"
     >
 </head>
 
-<body class="article-page">
+<body>
 
-    <div id="reading-progress" class="reading-progress"></div>
+<div id="reading-progress"></div>
 
 
-    <header class="site-header">
+<header class="site-header">
 
-        <div class="nav-shell">
+    <div class="nav-shell">
 
-            <a href="index.html" class="brand">
+        <a href="index.html" class="brand">
 
-                <span class="brand-mark">
-                    MJ
-                </span>
+            <span class="brand-mark">MJ</span>
 
-                <div>
-                    <strong>MILLER JOURNAL</strong>
-                    <small>TECH · TRAVEL · GROWTH</small>
-                </div>
+            <div>
+                <strong>MILLER JOURNAL</strong>
+                <small>TECH · TRAVEL · GROWTH</small>
+            </div>
 
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="index.html">
+                Home
             </a>
 
+            <a
+                href="tech.html"
+                class="active"
+            >
+                Tech
+            </a>
 
-            <nav class="main-nav">
+            <a href="travel.html">
+                Travel
+            </a>
 
-                <a href="index.html">
-                    Home
-                </a>
+            <a href="personal.html">
+                Growth
+            </a>
 
-                <a href="tech.html" class="active">
-                    Tech
-                </a>
-
-                <a href="travel.html">
-                    Travel
-                </a>
-
-                <a href="personal.html">
-                    Growth
-                </a>
-
-            </nav>
+        </nav>
 
 
-            <div class="nav-actions">
+        <div class="nav-actions">
 
-                <button
-                    id="theme-toggle"
-                    class="icon-button"
-                    type="button"
+            <button
+                id="theme-toggle"
+                class="icon-button"
+                type="button"
+            >
+                ◐
+            </button>
+
+            <button
+                id="surprise-button"
+                class="nav-cta"
+                type="button"
+            >
+                Surprise Me
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="category-hero tech-hero">
+
+        <div class="content-shell category-hero-grid">
+
+            <div>
+
+                <span class="eyebrow">
+                    TECHNOLOGY
+                </span>
+
+                <h1>
+                    Understand
+                    <span>what comes next.</span>
+                </h1>
+
+                <p>
+                    Infrastructure, AI, cloud computing, security,
+                    and the invisible systems making modern digital
+                    life possible.
+                </p>
+
+                <a
+                    href="#edge-computing"
+                    class="primary-button"
                 >
-                    ◐
-                </button>
+                    Start Reading →
+                </a>
 
-                <button
-                    id="surprise-button"
-                    class="nav-cta"
-                    type="button"
-                >
-                    Surprise Me
-                </button>
+            </div>
+
+
+            <div class="category-feature-visual">
+
+                <div class="ambient-image tech-ambient">
+
+                    <img
+                        src="images/ai-brain.jpg"
+                        alt="Technology"
+                    >
+
+                </div>
+
+                <div class="feature-float-card">
+
+                    <span>FEATURED</span>
+
+                    <strong>
+                        The cloud isn't disappearing.
+                        It's getting closer.
+                    </strong>
+
+                </div>
 
             </div>
 
         </div>
 
-    </header>
+    </section>
 
 
-    <main>
+    <section class="article-section">
 
-        <section class="article-hero">
+        <div class="article-shell">
 
-            <div class="content-shell article-hero-grid">
 
-                <div class="article-hero-copy">
+            <article
+                id="edge-computing"
+                class="journal-article"
+            >
 
-                    <span class="article-label">
-                        TECHNOLOGY
-                    </span>
+                <span class="article-kicker">
+                    INFRASTRUCTURE
+                </span>
 
-                    <h1>
-                        The systems shaping what comes next.
-                    </h1>
+                <h2>
+                    The Rise of Edge Computing:
+                    Why Distance Suddenly Matters
+                </h2>
+
+                <div class="article-meta">
+                    <span>8 MIN READ</span>
+                    <span>EDGE COMPUTING</span>
+                </div>
+
+
+                <div class="article-image-strip">
+
+                    <img
+                        src="images/pattern-dots.jpg"
+                        alt="Network visualization"
+                    >
+
+                    <img
+                        src="images/city-lights.jpg"
+                        alt="Connected city"
+                    >
+
+                </div>
+
+
+                <div class="article-copy">
+
+                    <p class="article-lead">
+                        Cloud computing changed where applications
+                        run. Edge computing is changing how close
+                        that computing needs to be.
+                    </p>
 
                     <p>
-                        Computing is moving faster, closer, and
-                        deeper into everyday life. This section
-                        explores the infrastructure, software,
-                        security, and ideas behind that shift.
+                        Instead of sending every request to a distant
+                        data center, an edge architecture allows some
+                        processing to happen closer to the user,
+                        device, machine, or physical location where
+                        the information was created.
+                    </p>
+
+                    <p>
+                        Distance matters because every trip across a
+                        network takes time. For email or document
+                        storage, a small delay may not matter. For
+                        manufacturing equipment, autonomous systems,
+                        live video analysis, medical technology, or
+                        interactive applications, those milliseconds
+                        can become important.
+                    </p>
+
+                    <blockquote>
+                        The cloud did not disappear.
+                        The edge simply gives applications another
+                        place to think.
+                    </blockquote>
+
+                    <p>
+                        The result is not an edge-versus-cloud
+                        decision. Modern architectures increasingly
+                        combine both. Central cloud systems remain
+                        valuable for scale, storage, analytics, and
+                        coordination while edge systems handle
+                        workloads that benefit from proximity.
+                    </p>
+
+                    <p>
+                        That creates another interesting challenge:
+                        distributed systems must still be secured,
+                        managed, updated, monitored, and connected.
+                        Moving computing closer to the user solves
+                        some problems while creating new engineering
+                        decisions.
                     </p>
 
                 </div>
 
+            </article>
 
-                <div class="article-hero-image">
+
+            <article
+                id="ai-edge"
+                class="journal-article"
+            >
+
+                <span class="article-kicker">
+                    ARTIFICIAL INTELLIGENCE
+                </span>
+
+                <h2>
+                    AI Is Leaving the Data Center
+                </h2>
+
+                <div class="article-meta">
+                    <span>7 MIN READ</span>
+                    <span>AI</span>
+                </div>
+
+
+                <div class="article-image-feature">
 
                     <img
-                        src="images/hero-code.jpg"
-                        alt="Modern laptop with programming code"
+                        src="images/idea-lightbulb.jpg"
+                        alt="AI concept"
                     >
 
                 </div>
 
-            </div>
 
-        </section>
+                <div class="article-copy">
 
+                    <p class="article-lead">
+                        Artificial intelligence is increasingly
+                        running directly on the devices people
+                        already use.
+                    </p>
 
-        <section class="article-list">
+                    <p>
+                        Phones, laptops, cameras, vehicles, and
+                        specialized hardware can now perform certain
+                        AI tasks without sending every piece of data
+                        back to a remote service.
+                    </p>
 
-            <div class="content-shell">
+                    <p>
+                        Local processing can improve responsiveness
+                        and reduce the amount of information that
+                        needs to leave a device. That is especially
+                        important when the data is sensitive or when
+                        reliable internet access cannot be assumed.
+                    </p>
 
+                    <blockquote>
+                        The future of AI is likely hybrid:
+                        enormous models in the cloud and smaller,
+                        specialized intelligence everywhere else.
+                    </blockquote>
 
-                <!-- EDGE COMPUTING -->
+                    <p>
+                        Developers will increasingly decide which
+                        tasks need cloud-scale computing and which
+                        can happen locally. That architectural
+                        decision may become just as important as
+                        choosing the model itself.
+                    </p>
 
-                <article
-                    id="edge-computing"
-                    class="long-article"
-                >
+                </div>
 
-                    <img
-                        src="images/ai-brain.jpg"
-                        alt="AI circuitry visualization"
-                        class="article-feature-image"
-                    >
-
-                    <span class="article-label">
-                        INFRASTRUCTURE
-                    </span>
-
-                    <h2>
-                        The Rise of Edge Computing:
-                        Why Distance Suddenly Matters
-                    </h2>
-
-                    <div class="article-meta">
-                        <span>8 min read</span>
-                        <span>Technology</span>
-                    </div>
-
-
-                    <div class="article-body">
-
-                        <p>
-                            Cloud computing changed technology by
-                            making enormous amounts of computing
-                            power available without requiring every
-                            organization to own the hardware. Edge
-                            computing takes that same idea and asks a
-                            different question: what happens when the
-                            work cannot afford to travel very far?
-                        </p>
-
-                        <p>
-                            Instead of sending every request to a
-                            distant data center, edge systems process
-                            some data closer to the device, user, or
-                            physical location where it is created.
-                            That can reduce latency, limit unnecessary
-                            network traffic, and allow applications to
-                            react much faster.
-                        </p>
+            </article>
 
 
-                        <div class="article-callout">
-                            The cloud did not disappear.
-                            The edge simply gives applications
-                            another place to think.
-                        </div>
+            <article
+                id="security"
+                class="journal-article"
+            >
+
+                <span class="article-kicker">
+                    INTERNET ARCHITECTURE
+                </span>
+
+                <h2>
+                    The Invisible Systems We Trust Every Day
+                </h2>
+
+                <div class="article-meta">
+                    <span>5 MIN READ</span>
+                    <span>NETWORKING</span>
+                </div>
 
 
-                        <div class="article-inline-grid">
-
-                            <img
-                                src="images/pattern-dots.jpg"
-                                alt="Abstract digital network pattern"
-                            >
-
-                            <img
-                                src="images/city-lights.jpg"
-                                alt="Connected city skyline at night"
-                            >
-
-                        </div>
-
-
-                        <p>
-                            The most interesting part is that edge
-                            computing is not limited to one industry.
-                            Manufacturing equipment, autonomous
-                            systems, retail locations, hospitals,
-                            smart cities, and even consumer devices
-                            can benefit when computing happens closer
-                            to where decisions are needed.
-                        </p>
-
-                        <p>
-                            For developers and cloud engineers, this
-                            means architecture is becoming more
-                            distributed. The question is no longer
-                            simply where an application runs. It is
-                            which parts should run in the cloud, which
-                            belong at the edge, and how those pieces
-                            stay secure and synchronized.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <!-- AI EDGE -->
-
-                <article
-                    id="ai-edge"
-                    class="long-article"
-                >
-
-                    <img
-                        src="images/hero-tech-bg.jpg"
-                        alt="Connected blue technology network"
-                        class="article-feature-image"
-                    >
-
-                    <span class="article-label">
-                        ARTIFICIAL INTELLIGENCE
-                    </span>
-
-                    <h2>
-                        AI Is Leaving the Data Center
-                    </h2>
-
-                    <div class="article-meta">
-                        <span>7 min read</span>
-                        <span>AI</span>
-                    </div>
-
-
-                    <div class="article-body">
-
-                        <p>
-                            Many people still picture artificial
-                            intelligence as something that happens
-                            inside huge remote systems. Increasingly,
-                            smaller AI models are being placed
-                            directly on phones, laptops, cameras,
-                            vehicles, and specialized hardware.
-                        </p>
-
-                        <p>
-                            That shift changes privacy, performance,
-                            reliability, and cost. A device that can
-                            process information locally does not
-                            always need to send sensitive data across
-                            a network just to make a simple decision.
-                        </p>
-
-
-                        <div class="article-inline-grid">
-
-                            <img
-                                src="images/idea-lightbulb.jpg"
-                                alt="Glowing light bulb"
-                            >
-
-                            <img
-                                src="images/workspace.jpg"
-                                alt="Laptop and workspace"
-                            >
-
-                        </div>
-
-
-                        <p>
-                            The future is likely to be hybrid.
-                            Massive models will continue to live in
-                            powerful data centers, while smaller
-                            models handle immediate tasks closer to
-                            users. The interesting engineering work
-                            will happen in deciding what belongs
-                            where.
-                        </p>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SECURITY -->
-
-                <article
-                    id="security"
-                    class="long-article"
-                >
+                <div class="article-image-feature">
 
                     <img
                         src="images/night-sky.jpg"
-                        alt="Stars above a dark mountain landscape"
-                        class="article-feature-image"
+                        alt="Network concept"
                     >
 
-                    <span class="article-label">
-                        SECURITY
-                    </span>
-
-                    <h2>
-                        The Invisible Systems We Trust Every Day
-                    </h2>
-
-                    <div class="article-meta">
-                        <span>5 min read</span>
-                        <span>Internet Architecture</span>
-                    </div>
+                </div>
 
 
-                    <div class="article-body">
+                <div class="article-copy">
 
-                        <p>
-                            Opening a website feels instant, but
-                            behind that simple action is a chain of
-                            systems making decisions on your behalf.
-                            DNS resolution, routing, encryption,
-                            certificates, caching, and content
-                            delivery all have to work together.
-                        </p>
+                    <p class="article-lead">
+                        Opening a website feels like one action.
+                        Technically, it is anything but.
+                    </p>
 
-                        <p>
-                            Most people only notice the architecture
-                            when something fails. A slow lookup,
-                            broken certificate, routing problem, or
-                            unavailable service can turn a familiar
-                            website into an error message.
-                        </p>
+                    <p>
+                        DNS, routing, TLS certificates, web servers,
+                        application services, caching systems, and
+                        content delivery networks can all contribute
+                        to the experience before a page appears.
+                    </p>
 
-                        <div class="article-callout">
-                            Good infrastructure often feels invisible.
-                            Its success is measured by how rarely
-                            users need to think about it.
-                        </div>
+                    <p>
+                        Most users never need to think about those
+                        layers. That invisibility is actually a sign
+                        of good infrastructure.
+                    </p>
 
-                        <p>
-                            Understanding those layers makes
-                            troubleshooting less mysterious because
-                            a website is no longer one thing. It is a
-                            collection of systems depending on one
-                            another.
-                        </p>
+                    <blockquote>
+                        Good infrastructure disappears when it works
+                        and becomes impossible to ignore when it
+                        doesn't.
+                    </blockquote>
 
-                    </div>
+                    <p>
+                        Understanding the individual layers makes
+                        troubleshooting far less mysterious. Instead
+                        of asking why “the internet” is broken, the
+                        question becomes which part of the path is
+                        failing.
+                    </p>
 
-                </article>
+                </div>
 
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <footer class="site-footer">
-
-        <div class="content-shell footer-inner">
-
-            <div>
-                <strong>MILLER JOURNAL</strong>
-                <p>Technology that makes the invisible visible.</p>
-            </div>
-
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="travel.html">Travel</a>
-                <a href="personal.html">Growth</a>
-            </div>
-
-            <p class="creator-line">
-                Created &amp; developed by
-                <strong>Letherius Miller</strong>
-                ·
-                <span id="current-year"></span>
-            </p>
+            </article>
 
         </div>
 
-    </footer>
+    </section>
+
+</main>
 
 
-    <button
-        id="back-to-top"
-        class="back-to-top"
-        type="button"
-    >
-        ↑
-    </button>
+<footer class="site-footer">
+
+    <div class="content-shell footer-grid">
+
+        <div>
+            <strong class="footer-logo">
+                MILLER JOURNAL
+            </strong>
+
+            <p>
+                Technology that makes the invisible visible.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="travel.html">Travel</a>
+            <a href="personal.html">Growth</a>
+        </div>
+
+        <div class="creator-credit">
+            CREATED &amp; DEVELOPED BY
+            <strong>Letherius Miller</strong>
+            ·
+            <span id="current-year"></span>
+        </div>
+
+    </div>
+
+</footer>
 
 
-    <script src="script.js?v=2.0.0"></script>
+<button
+    id="back-to-top"
+    class="back-to-top"
+    type="button"
+>
+    ↑
+</button>
+
+
+<script src="script.js?v=3.0.0"></script>
 
 </body>
 </html>
