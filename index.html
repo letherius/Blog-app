@@ -2,57 +2,1163 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Personal Blog</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Miller Journal is a modern digital journal covering technology, travel, productivity, ideas, and personal growth."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0a1020"
+    >
+
+    <title>Miller Journal | Tech. Travel. Growth.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css?v=2.0.0"
+    >
 </head>
+
 <body>
-    <header class="bg-primary text-white text-center py-4">
-        <h1>My Personal Blog</h1>
+
+    <div id="reading-progress" class="reading-progress"></div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="nav-shell">
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="Miller Journal home"
+            >
+
+                <span class="brand-mark">
+                    MJ
+                </span>
+
+                <div>
+                    <strong>
+                        MILLER JOURNAL
+                    </strong>
+
+                    <small>
+                        TECH · TRAVEL · GROWTH
+                    </small>
+                </div>
+
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="active">
+                    Home
+                </a>
+
+                <a href="tech.html">
+                    Tech
+                </a>
+
+                <a href="travel.html">
+                    Travel
+                </a>
+
+                <a href="personal.html">
+                    Growth
+                </a>
+
+            </nav>
+
+
+            <div class="nav-actions">
+
+                <button
+                    id="theme-toggle"
+                    class="icon-button"
+                    type="button"
+                    aria-label="Toggle light and dark mode"
+                >
+                    ◐
+                </button>
+
+                <button
+                    id="surprise-button"
+                    class="nav-cta"
+                    type="button"
+                >
+                    Surprise Me
+                </button>
+
+            </div>
+
+        </div>
+
     </header>
-    <main class="container mt-4">
-        <!-- Technology Trends and Reviews -->
-        <section class="mb-5" onclick="navigateTo('tech.html')">
-            <h2>Technology Trends and Reviews</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">The Rise of Edge Computing: What You Need to Know</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-shell">
+
+                <div class="hero-copy">
+
+                    <span class="eyebrow">
+                        IDEAS WORTH COMING BACK FOR
+                    </span>
+
+                    <h1>
+                        Curiosity has
+                        <span>no category.</span>
+                    </h1>
+
+                    <p>
+                        Technology, travel, growth, and the ideas
+                        connecting all three. Miller Journal is
+                        built for people who always want to learn
+                        one more thing.
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+                            href="#latest"
+                            class="primary-button"
+                        >
+                            Explore the latest
+                            <span>→</span>
+                        </a>
+
+                        <button
+                            id="hero-surprise-button"
+                            class="secondary-button"
+                            type="button"
+                        >
+                            Pick something for me
+                        </button>
+
+                    </div>
+
+
+                    <div class="hero-meta">
+
+                        <div>
+                            <strong>3</strong>
+                            <span>Core topics</span>
+                        </div>
+
+                        <div>
+                            <strong>9+</strong>
+                            <span>Featured stories</span>
+                        </div>
+
+                        <div>
+                            <strong>∞</strong>
+                            <span>Things to explore</span>
+                        </div>
+
+                    </div>
+
                 </div>
+
+
+                <div class="hero-media">
+
+                    <img
+                        src="images/hero-tech-bg.jpg"
+                        alt="Abstract connected technology network"
+                        class="hero-main-image"
+                    >
+
+                    <div class="hero-card floating-card">
+
+                        <span>
+                            THIS WEEK
+                        </span>
+
+                        <strong>
+                            The future is getting closer to the edge.
+                        </strong>
+
+                        <a href="tech.html#edge-computing">
+                            Read the feature →
+                        </a>
+
+                    </div>
+
+                </div>
+
             </div>
-            <!-- May add more tech-related blog posts here -->
+
         </section>
 
-        <!-- Travel Adventures -->
-        <section class="mb-5" onclick="navigateTo('travel.html')">
-            <h2>Travel Adventures</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Exploring Kyoto: Temples, Tea, and Tranquility</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                </div>
+
+        <!-- =================================================
+             TRENDING STRIP
+        ================================================== -->
+
+        <section class="trending-strip">
+
+            <div class="content-shell trending-inner">
+
+                <span class="trending-label">
+                    TRENDING
+                </span>
+
+                <a href="tech.html#edge-computing">
+                    Edge computing
+                </a>
+
+                <a href="travel.html#kyoto">
+                    Kyoto
+                </a>
+
+                <a href="personal.html#focus">
+                    Deep focus
+                </a>
+
+                <a href="tech.html#ai-edge">
+                    AI at the edge
+                </a>
+
+                <a href="travel.html#weekend">
+                    Better weekend travel
+                </a>
+
             </div>
-            <!-- May add more travel-related blog posts here -->
+
         </section>
 
-        <!-- Personal Development and Productivity -->
-        <section class="mb-5" onclick="navigateTo('personal.html')">
-            <h2>Personal Development and Productivity</h2>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Mastering the Pomodoro Technique for Enhanced Focus</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+        <!-- =================================================
+             FEATURED CATEGORIES
+        ================================================== -->
+
+        <section class="section-block">
+
+            <div class="content-shell">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            CHOOSE YOUR LANE
+                        </span>
+
+                        <h2>
+                            Three worlds. One journal.
+                        </h2>
+                    </div>
+
+                    <p>
+                        Start with what interests you today.
+                        Tomorrow might be completely different.
+                    </p>
+
                 </div>
+
+
+                <div class="category-grid">
+
+                    <a
+                        href="tech.html"
+                        class="category-card tech-category"
+                    >
+
+                        <img
+                            src="images/hero-code.jpg"
+                            alt="Laptop displaying programming code"
+                        >
+
+                        <div class="category-overlay"></div>
+
+                        <div class="category-copy">
+
+                            <span>
+                                01
+                            </span>
+
+                            <h3>
+                                Technology
+                            </h3>
+
+                            <p>
+                                Computing, AI, infrastructure,
+                                security, and what comes next.
+                            </p>
+
+                            <strong>
+                                Explore Tech →
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="travel.html"
+                        class="category-card travel-category"
+                    >
+
+                        <img
+                            src="images/hero-travel.jpg"
+                            alt="Traveler overlooking mountains at sunrise"
+                        >
+
+                        <div class="category-overlay"></div>
+
+                        <div class="category-copy">
+
+                            <span>
+                                02
+                            </span>
+
+                            <h3>
+                                Travel
+                            </h3>
+
+                            <p>
+                                Places worth seeing and better ways
+                                to experience them.
+                            </p>
+
+                            <strong>
+                                Explore Travel →
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="personal.html"
+                        class="category-card growth-category"
+                    >
+
+                        <img
+                            src="images/hero-growth.jpg"
+                            alt="Desk notebook with focus and growth planning"
+                        >
+
+                        <div class="category-overlay"></div>
+
+                        <div class="category-copy">
+
+                            <span>
+                                03
+                            </span>
+
+                            <h3>
+                                Growth
+                            </h3>
+
+                            <p>
+                                Focus, productivity, better systems,
+                                and steady improvement.
+                            </p>
+
+                            <strong>
+                                Explore Growth →
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
             </div>
-            <!-- May add more personal development blog posts here -->
+
         </section>
+
+
+        <!-- =================================================
+             LATEST ARTICLES
+        ================================================== -->
+
+        <section
+            id="latest"
+            class="section-block latest-section"
+        >
+
+            <div class="content-shell">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            FRESH FROM THE JOURNAL
+                        </span>
+
+                        <h2>
+                            Keep scrolling. Something will catch you.
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="discovery-bar">
+
+                    <label class="search-box">
+
+                        <span>
+                            ⌕
+                        </span>
+
+                        <input
+                            id="post-search"
+                            type="search"
+                            placeholder="Search stories..."
+                            autocomplete="off"
+                        >
+
+                    </label>
+
+
+                    <div class="filter-buttons">
+
+                        <button
+                            type="button"
+                            class="filter-button active"
+                            data-filter="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-filter="tech"
+                        >
+                            Tech
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-filter="travel"
+                        >
+                            Travel
+                        </button>
+
+                        <button
+                            type="button"
+                            class="filter-button"
+                            data-filter="growth"
+                        >
+                            Growth
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="post-grid"
+                    class="post-grid"
+                >
+
+
+                    <!-- POST 1 -->
+
+                    <article
+                        class="post-card featured-post"
+                        data-category="tech"
+                        data-search="edge computing cloud infrastructure technology distributed systems"
+                    >
+
+                        <a
+                            href="tech.html#edge-computing"
+                            class="post-image"
+                        >
+
+                            <img
+                                src="images/ai-brain.jpg"
+                                alt="Digital AI network"
+                            >
+
+                            <span class="post-category tech-tag">
+                                Technology
+                            </span>
+
+                        </a>
+
+
+                        <div class="post-content">
+
+                            <div class="post-meta">
+                                <span>8 min read</span>
+                                <span>Featured</span>
+                            </div>
+
+                            <h3>
+                                <a href="tech.html#edge-computing">
+                                    The Rise of Edge Computing:
+                                    Why Distance Suddenly Matters
+                                </a>
+                            </h3>
+
+                            <p>
+                                Cloud computing changed where work
+                                happens. Edge computing is changing
+                                how close that work needs to be.
+                            </p>
+
+
+                            <div class="post-footer">
+
+                                <a href="tech.html#edge-computing">
+                                    Read story →
+                                </a>
+
+                                <button
+                                    class="bookmark-button"
+                                    type="button"
+                                    data-bookmark="edge-computing"
+                                    aria-label="Bookmark Edge Computing article"
+                                >
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POST 2 -->
+
+                    <article
+                        class="post-card"
+                        data-category="travel"
+                        data-search="kyoto japan temples tea travel culture"
+                    >
+
+                        <a
+                            href="travel.html#kyoto"
+                            class="post-image"
+                        >
+
+                            <img
+                                src="images/kyoto-temple.jpg"
+                                alt="Japanese pagoda near Mount Fuji"
+                            >
+
+                            <span class="post-category travel-tag">
+                                Travel
+                            </span>
+
+                        </a>
+
+
+                        <div class="post-content">
+
+                            <div class="post-meta">
+                                <span>6 min read</span>
+                                <span>Japan</span>
+                            </div>
+
+                            <h3>
+                                <a href="travel.html#kyoto">
+                                    Kyoto Beyond the Checklist
+                                </a>
+                            </h3>
+
+                            <p>
+                                Temples matter, but Kyoto gets
+                                better when you stop trying to see
+                                everything.
+                            </p>
+
+
+                            <div class="post-footer">
+
+                                <a href="travel.html#kyoto">
+                                    Read story →
+                                </a>
+
+                                <button
+                                    class="bookmark-button"
+                                    type="button"
+                                    data-bookmark="kyoto"
+                                    aria-label="Bookmark Kyoto article"
+                                >
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POST 3 -->
+
+                    <article
+                        class="post-card"
+                        data-category="growth"
+                        data-search="pomodoro focus productivity time management deep work"
+                    >
+
+                        <a
+                            href="personal.html#focus"
+                            class="post-image"
+                        >
+
+                            <img
+                                src="images/pomodoro-timer.jpg"
+                                alt="Hourglass representing focused time"
+                            >
+
+                            <span class="post-category growth-tag">
+                                Growth
+                            </span>
+
+                        </a>
+
+
+                        <div class="post-content">
+
+                            <div class="post-meta">
+                                <span>5 min read</span>
+                                <span>Focus</span>
+                            </div>
+
+                            <h3>
+                                <a href="personal.html#focus">
+                                    The Focus System That Beats
+                                    Waiting for Motivation
+                                </a>
+                            </h3>
+
+                            <p>
+                                A practical way to start, protect
+                                your attention, and actually finish.
+                            </p>
+
+
+                            <div class="post-footer">
+
+                                <a href="personal.html#focus">
+                                    Read story →
+                                </a>
+
+                                <button
+                                    class="bookmark-button"
+                                    type="button"
+                                    data-bookmark="focus-system"
+                                    aria-label="Bookmark Focus System article"
+                                >
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POST 4 -->
+
+                    <article
+                        class="post-card"
+                        data-category="tech"
+                        data-search="artificial intelligence ai computing edge devices technology"
+                    >
+
+                        <a
+                            href="tech.html#ai-edge"
+                            class="post-image"
+                        >
+
+                            <img
+                                src="images/hero-code.jpg"
+                                alt="Laptop with software development code"
+                            >
+
+                            <span class="post-category tech-tag">
+                                Technology
+                            </span>
+
+                        </a>
+
+
+                        <div class="post-content">
+
+                            <div class="post-meta">
+                                <span>7 min read</span>
+                                <span>AI</span>
+                            </div>
+
+                            <h3>
+                                <a href="tech.html#ai-edge">
+                                    AI Is Leaving the Data Center
+                                </a>
+                            </h3>
+
+                            <p>
+                                More intelligence is moving directly
+                                into devices, applications, and the
+                                places where data is created.
+                            </p>
+
+
+                            <div class="post-footer">
+
+                                <a href="tech.html#ai-edge">
+                                    Read story →
+                                </a>
+
+                                <button
+                                    class="bookmark-button"
+                                    type="button"
+                                    data-bookmark="ai-edge"
+                                    aria-label="Bookmark AI article"
+                                >
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POST 5 -->
+
+                    <article
+                        class="post-card"
+                        data-category="travel"
+                        data-search="weekend travel adventure packing mountains short trip"
+                    >
+
+                        <a
+                            href="travel.html#weekend"
+                            class="post-image"
+                        >
+
+                            <img
+                                src="images/adventure-hike.jpg"
+                                alt="Hiker overlooking mountains at sunset"
+                            >
+
+                            <span class="post-category travel-tag">
+                                Travel
+                            </span>
+
+                        </a>
+
+
+                        <div class="post-content">
+
+                            <div class="post-meta">
+                                <span>4 min read</span>
+                                <span>Adventure</span>
+                            </div>
+
+                            <h3>
+                                <a href="travel.html#weekend">
+                                    Stop Overplanning Weekend Trips
+                                </a>
+                            </h3>
+
+                            <p>
+                                Short trips feel longer when the plan
+                                leaves room to actually experience
+                                the place.
+                            </p>
+
+
+                            <div class="post-footer">
+
+                                <a href="travel.html#weekend">
+                                    Read story →
+                                </a>
+
+                                <button
+                                    class="bookmark-button"
+                                    type="button"
+                                    data-bookmark="weekend-travel"
+                                    aria-label="Bookmark weekend travel article"
+                                >
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- POST 6 -->
+
+                    <article
+                        class="post-card"
+                        data-category="growth"
+                        data-search="systems habits goals productivity personal growth success"
+                    >
+
+                        <a
+                            href="personal.html#systems"
+                            class="post-image"
+                        >
+
+                            <img
+                                src="images/success-mountain.jpg"
+                                alt="Person celebrating on a mountain at sunrise"
+                            >
+
+                            <span class="post-category growth-tag">
+                                Growth
+                            </span>
+
+                        </a>
+
+
+                        <div class="post-content">
+
+                            <div class="post-meta">
+                                <span>6 min read</span>
+                                <span>Systems</span>
+                            </div>
+
+                            <h3>
+                                <a href="personal.html#systems">
+                                    Goals Point. Systems Move.
+                                </a>
+                            </h3>
+
+                            <p>
+                                Goals tell you where you want to go.
+                                Systems determine whether you ever
+                                arrive.
+                            </p>
+
+
+                            <div class="post-footer">
+
+                                <a href="personal.html#systems">
+                                    Read story →
+                                </a>
+
+                                <button
+                                    class="bookmark-button"
+                                    type="button"
+                                    data-bookmark="systems"
+                                    aria-label="Bookmark systems article"
+                                >
+                                    ♡
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div
+                    id="no-results"
+                    class="no-results hidden"
+                >
+                    No stories matched that search.
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             VISUAL BREAK
+        ================================================== -->
+
+        <section class="quote-section">
+
+            <img
+                src="images/quote-bg.jpg"
+                alt=""
+                class="quote-background"
+            >
+
+            <div class="quote-overlay"></div>
+
+            <div class="quote-content">
+
+                <span>
+                    MILLER JOURNAL
+                </span>
+
+                <blockquote>
+                    “The best thing you can learn today might have
+                    nothing to do with what you were looking for.”
+                </blockquote>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             QUICK READS
+        ================================================== -->
+
+        <section class="section-block">
+
+            <div class="content-shell">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="eyebrow">
+                            QUICK HITS
+                        </span>
+
+                        <h2>
+                            Five-minute curiosity.
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <a href="travel.html#coast" class="quick-card">
+
+                        <img
+                            src="images/beach-sunset.jpg"
+                            alt="Beach at sunset"
+                        >
+
+                        <div>
+                            <span>Travel</span>
+                            <strong>
+                                Why sunsets make better itinerary
+                                anchors than reservations
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <a href="personal.html#workspace" class="quick-card">
+
+                        <img
+                            src="images/workspace.jpg"
+                            alt="Minimal modern workspace"
+                        >
+
+                        <div>
+                            <span>Growth</span>
+                            <strong>
+                                Your environment may be doing more
+                                work than your willpower
+                            </strong>
+                        </div>
+
+                    </a>
+
+
+                    <a href="tech.html#security" class="quick-card">
+
+                        <img
+                            src="images/night-sky.jpg"
+                            alt="Night sky over mountains"
+                        >
+
+                        <div>
+                            <span>Technology</span>
+                            <strong>
+                                The invisible systems we trust every
+                                day
+                            </strong>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             NEWSLETTER
+        ================================================== -->
+
+        <section class="newsletter-section">
+
+            <div class="content-shell">
+
+                <div class="newsletter-card">
+
+                    <img
+                        src="images/newsletter-bg.jpg"
+                        alt=""
+                        class="newsletter-image"
+                    >
+
+                    <div class="newsletter-overlay"></div>
+
+
+                    <div class="newsletter-copy">
+
+                        <span class="eyebrow">
+                            ONE GOOD READ AT A TIME
+                        </span>
+
+                        <h2>
+                            Make your inbox more interesting.
+                        </h2>
+
+                        <p>
+                            A simple demo signup for the portfolio
+                            version of Miller Journal. No account
+                            required and nothing actually gets sent.
+                        </p>
+
+
+                        <form id="newsletter-form">
+
+                            <input
+                                id="newsletter-email"
+                                type="email"
+                                placeholder="you@example.com"
+                                required
+                            >
+
+                            <button type="submit">
+                                Join the Journal
+                            </button>
+
+                        </form>
+
+
+                        <p
+                            id="newsletter-message"
+                            class="newsletter-message"
+                            aria-live="polite"
+                        ></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
-    <footer class="bg-dark text-white text-center py-3">
-        © 2024 My Personal Blog
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="content-shell footer-inner">
+
+            <div>
+
+                <strong>
+                    MILLER JOURNAL
+                </strong>
+
+                <p>
+                    Tech. Travel. Growth. Curiosity in between.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="tech.html">
+                    Technology
+                </a>
+
+                <a href="travel.html">
+                    Travel
+                </a>
+
+                <a href="personal.html">
+                    Growth
+                </a>
+
+            </div>
+
+
+            <p class="creator-line">
+                Created &amp; developed by
+                <strong>Letherius Miller</strong>
+                ·
+                <span id="current-year"></span>
+            </p>
+
+        </div>
+
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+
+
+    <button
+        id="back-to-top"
+        class="back-to-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+    <script src="script.js?v=2.0.0"></script>
+
 </body>
 </html>
