@@ -1,457 +1,559 @@
 // =========================================================
-// MILLER JOURNAL
-// Shared site interaction
+// MILLER JOURNAL v3
 // =========================================================
 
 
-// ---------------------------------------------------------
-// ELEMENTS
-// ---------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
 
-const themeToggle = document.getElementById("theme-toggle");
+    // -----------------------------------------------------
+    // ELEMENTS
+    // -----------------------------------------------------
 
-const surpriseButton =
-    document.getElementById("surprise-button");
+    const body =
+        document.body;
 
-const heroSurpriseButton =
-    document.getElementById("hero-surprise-button");
+    const themeToggle =
+        document.getElementById("theme-toggle");
 
-const searchInput =
-    document.getElementById("post-search");
+    const surpriseButton =
+        document.getElementById("surprise-button");
 
-const postCards =
-    [...document.querySelectorAll(".post-card")];
+    const heroSurpriseButton =
+        document.getElementById("hero-surprise-button");
 
-const filterButtons =
-    [...document.querySelectorAll(".filter-button")];
+    const searchInput =
+        document.getElementById("post-search");
 
-const noResults =
-    document.getElementById("no-results");
+    const filterButtons =
+        Array.from(
+            document.querySelectorAll(
+                ".filter-button"
+            )
+        );
 
-const bookmarkButtons =
-    [...document.querySelectorAll(".bookmark-button")];
+    const postCards =
+        Array.from(
+            document.querySelectorAll(
+                ".post-card"
+            )
+        );
 
-const newsletterForm =
-    document.getElementById("newsletter-form");
+    const bookmarkButtons =
+        Array.from(
+            document.querySelectorAll(
+                ".bookmark-button"
+            )
+        );
 
-const newsletterEmail =
-    document.getElementById("newsletter-email");
+    const noResults =
+        document.getElementById("no-results");
 
-const newsletterMessage =
-    document.getElementById("newsletter-message");
+    const newsletterForm =
+        document.getElementById(
+            "newsletter-form"
+        );
 
-const backToTop =
-    document.getElementById("back-to-top");
+    const newsletterEmail =
+        document.getElementById(
+            "newsletter-email"
+        );
 
-const readingProgress =
-    document.getElementById("reading-progress");
+    const newsletterMessage =
+        document.getElementById(
+            "newsletter-message"
+        );
 
-const currentYear =
-    document.getElementById("current-year");
+    const backToTop =
+        document.getElementById(
+            "back-to-top"
+        );
+
+    const readingProgress =
+        document.getElementById(
+            "reading-progress"
+        );
+
+    const currentYear =
+        document.getElementById(
+            "current-year"
+        );
 
 
-// ---------------------------------------------------------
-// YEAR
-// ---------------------------------------------------------
+    // -----------------------------------------------------
+    // YEAR
+    // -----------------------------------------------------
 
-if (currentYear) {
-    currentYear.textContent =
-        new Date().getFullYear();
-}
+    if (currentYear) {
+
+        currentYear.textContent =
+            new Date().getFullYear();
+
+    }
 
 
-// ---------------------------------------------------------
-// THEME
-// ---------------------------------------------------------
+    // -----------------------------------------------------
+    // THEME
+    // -----------------------------------------------------
 
-const savedTheme =
-    localStorage.getItem("millerJournalTheme");
+    const savedTheme =
+        localStorage.getItem(
+            "millerJournalTheme"
+        );
 
-if (savedTheme === "light") {
-    document.body.classList.add("light-theme");
-}
 
-if (themeToggle) {
+    if (savedTheme === "light") {
 
-    themeToggle.addEventListener("click", () => {
-
-        document.body.classList.toggle(
+        body.classList.add(
             "light-theme"
         );
 
-        const isLight =
-            document.body.classList.contains(
-                "light-theme"
-            );
-
-        localStorage.setItem(
-            "millerJournalTheme",
-            isLight ? "light" : "dark"
-        );
-
-    });
-
-}
-
-
-// ---------------------------------------------------------
-// SURPRISE ME
-// ---------------------------------------------------------
-
-const surpriseLinks = [
-    "tech.html#edge-computing",
-    "tech.html#ai-edge",
-    "tech.html#security",
-    "travel.html#kyoto",
-    "travel.html#weekend",
-    "travel.html#coast",
-    "personal.html#focus",
-    "personal.html#systems",
-    "personal.html#workspace"
-];
-
-
-function surpriseMe() {
-
-    const randomIndex =
-        Math.floor(
-            Math.random() *
-            surpriseLinks.length
-        );
-
-    window.location.href =
-        surpriseLinks[randomIndex];
-
-}
-
-
-if (surpriseButton) {
-    surpriseButton.addEventListener(
-        "click",
-        surpriseMe
-    );
-}
-
-
-if (heroSurpriseButton) {
-    heroSurpriseButton.addEventListener(
-        "click",
-        surpriseMe
-    );
-}
-
-
-// ---------------------------------------------------------
-// SEARCH + FILTERING
-// ---------------------------------------------------------
-
-let activeFilter = "all";
-
-
-function filterPosts() {
-
-    if (!postCards.length) {
-        return;
     }
 
-    const searchTerm =
-        searchInput
-            ? searchInput.value
-                .trim()
-                .toLowerCase()
-            : "";
 
-    let visibleCount = 0;
+    if (themeToggle) {
 
+        themeToggle.addEventListener(
+            "click",
+            () => {
 
-    postCards.forEach(card => {
-
-        const category =
-            card.dataset.category || "";
-
-        const searchableText =
-            (
-                card.dataset.search +
-                " " +
-                card.textContent
-            ).toLowerCase();
-
-        const categoryMatches =
-            activeFilter === "all" ||
-            category === activeFilter;
-
-        const searchMatches =
-            !searchTerm ||
-            searchableText.includes(
-                searchTerm
-            );
-
-        const shouldShow =
-            categoryMatches &&
-            searchMatches;
+                body.classList.toggle(
+                    "light-theme"
+                );
 
 
-        card.classList.toggle(
-            "hidden",
-            !shouldShow
+                const mode =
+                    body.classList.contains(
+                        "light-theme"
+                    )
+                        ? "light"
+                        : "dark";
+
+
+                localStorage.setItem(
+                    "millerJournalTheme",
+                    mode
+                );
+
+            }
         );
 
+    }
 
-        if (shouldShow) {
-            visibleCount++;
+
+    // -----------------------------------------------------
+    // SURPRISE ME
+    // -----------------------------------------------------
+
+    const surpriseLinks = [
+
+        "tech.html#edge-computing",
+
+        "tech.html#ai-edge",
+
+        "tech.html#security",
+
+        "travel.html#kyoto",
+
+        "travel.html#weekend",
+
+        "travel.html#coast",
+
+        "personal.html#focus",
+
+        "personal.html#systems",
+
+        "personal.html#workspace"
+
+    ];
+
+
+    function surpriseMe() {
+
+        const index =
+            Math.floor(
+                Math.random() *
+                surpriseLinks.length
+            );
+
+
+        window.location.href =
+            surpriseLinks[index];
+
+    }
+
+
+    if (surpriseButton) {
+
+        surpriseButton.addEventListener(
+            "click",
+            surpriseMe
+        );
+
+    }
+
+
+    if (heroSurpriseButton) {
+
+        heroSurpriseButton.addEventListener(
+            "click",
+            surpriseMe
+        );
+
+    }
+
+
+    // -----------------------------------------------------
+    // FILTER + SEARCH
+    // -----------------------------------------------------
+
+    let activeFilter = "all";
+
+
+    function filterPosts() {
+
+        if (!postCards.length) {
+            return;
         }
 
-    });
+
+        const term =
+            searchInput
+                ? searchInput.value
+                    .trim()
+                    .toLowerCase()
+                : "";
 
 
-    if (noResults) {
+        let visible = 0;
 
-        noResults.classList.toggle(
-            "hidden",
-            visibleCount !== 0
+
+        postCards.forEach(card => {
+
+            const category =
+                card.dataset.category || "";
+
+            const searchText =
+                (
+                    card.dataset.search +
+                    " " +
+                    card.textContent
+                ).toLowerCase();
+
+
+            const categoryMatch =
+                activeFilter === "all" ||
+                category === activeFilter;
+
+
+            const searchMatch =
+                !term ||
+                searchText.includes(term);
+
+
+            const show =
+                categoryMatch &&
+                searchMatch;
+
+
+            card.classList.toggle(
+                "hidden",
+                !show
+            );
+
+
+            if (show) {
+                visible++;
+            }
+
+        });
+
+
+        if (noResults) {
+
+            noResults.classList.toggle(
+                "hidden",
+                visible > 0
+            );
+
+        }
+
+    }
+
+
+    if (searchInput) {
+
+        searchInput.addEventListener(
+            "input",
+            filterPosts
         );
 
     }
 
-}
+
+    filterButtons.forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                filterButtons.forEach(
+                    item =>
+                        item.classList.remove(
+                            "active"
+                        )
+                );
 
 
-if (searchInput) {
-
-    searchInput.addEventListener(
-        "input",
-        filterPosts
-    );
-
-}
+                button.classList.add(
+                    "active"
+                );
 
 
-filterButtons.forEach(button => {
+                activeFilter =
+                    button.dataset.filter;
 
-    button.addEventListener("click", () => {
 
-        filterButtons.forEach(item => {
-            item.classList.remove("active");
-        });
+                filterPosts();
 
-        button.classList.add("active");
-
-        activeFilter =
-            button.dataset.filter;
-
-        filterPosts();
+            }
+        );
 
     });
 
-});
 
+    // -----------------------------------------------------
+    // BOOKMARKS
+    // -----------------------------------------------------
 
-// ---------------------------------------------------------
-// BOOKMARKS
-// ---------------------------------------------------------
+    function getBookmarks() {
 
-function loadBookmarks() {
+        try {
 
-    try {
+            return JSON.parse(
+                localStorage.getItem(
+                    "millerJournalBookmarks"
+                )
+            ) || [];
 
-        return JSON.parse(
-            localStorage.getItem(
-                "millerJournalBookmarks"
-            )
-        ) || [];
+        } catch (error) {
 
-    } catch {
+            return [];
 
-        return [];
+        }
 
     }
 
-}
+
+    function saveBookmarks(bookmarks) {
+
+        localStorage.setItem(
+            "millerJournalBookmarks",
+            JSON.stringify(bookmarks)
+        );
+
+    }
 
 
-function saveBookmarks(bookmarks) {
+    function updateBookmarks() {
 
-    localStorage.setItem(
-        "millerJournalBookmarks",
-        JSON.stringify(bookmarks)
-    );
-
-}
+        const bookmarks =
+            getBookmarks();
 
 
-function updateBookmarkButtons() {
+        bookmarkButtons.forEach(button => {
 
-    const bookmarks =
-        loadBookmarks();
+            const id =
+                button.dataset.bookmark;
+
+
+            const saved =
+                bookmarks.includes(id);
+
+
+            button.classList.toggle(
+                "saved",
+                saved
+            );
+
+
+            button.textContent =
+                saved ? "♥" : "♡";
+
+        });
+
+    }
 
 
     bookmarkButtons.forEach(button => {
 
-        const id =
-            button.dataset.bookmark;
+        button.addEventListener(
+            "click",
+            () => {
 
-        const isSaved =
-            bookmarks.includes(id);
+                const id =
+                    button.dataset.bookmark;
 
-        button.classList.toggle(
-            "saved",
-            isSaved
+
+                let bookmarks =
+                    getBookmarks();
+
+
+                if (
+                    bookmarks.includes(id)
+                ) {
+
+                    bookmarks =
+                        bookmarks.filter(
+                            item => item !== id
+                        );
+
+                } else {
+
+                    bookmarks.push(id);
+
+                }
+
+
+                saveBookmarks(bookmarks);
+
+                updateBookmarks();
+
+            }
         );
 
-        button.textContent =
-            isSaved ? "♥" : "♡";
-
     });
 
-}
+
+    updateBookmarks();
 
 
-bookmarkButtons.forEach(button => {
+    // -----------------------------------------------------
+    // NEWSLETTER DEMO
+    // -----------------------------------------------------
 
-    button.addEventListener("click", () => {
+    if (
+        newsletterForm &&
+        newsletterEmail &&
+        newsletterMessage
+    ) {
 
-        const id =
-            button.dataset.bookmark;
+        newsletterForm.addEventListener(
+            "submit",
+            event => {
 
-        let bookmarks =
-            loadBookmarks();
-
-
-        if (bookmarks.includes(id)) {
-
-            bookmarks =
-                bookmarks.filter(
-                    item => item !== id
-                );
-
-        } else {
-
-            bookmarks.push(id);
-
-        }
+                event.preventDefault();
 
 
-        saveBookmarks(bookmarks);
-
-        updateBookmarkButtons();
-
-    });
-
-});
+                const email =
+                    newsletterEmail.value
+                        .trim();
 
 
-updateBookmarkButtons();
+                if (!email) {
+                    return;
+                }
 
-
-// ---------------------------------------------------------
-// NEWSLETTER DEMO
-// ---------------------------------------------------------
-
-if (newsletterForm) {
-
-    newsletterForm.addEventListener(
-        "submit",
-        event => {
-
-            event.preventDefault();
-
-            const email =
-                newsletterEmail.value.trim();
-
-
-            if (!email) {
-                return;
-            }
-
-
-            newsletterMessage.textContent =
-                "You're on the list. Welcome to Miller Journal.";
-
-            newsletterForm.reset();
-
-
-            window.setTimeout(() => {
 
                 newsletterMessage.textContent =
-                    "";
-
-            }, 5000);
-
-        }
-    );
-
-}
+                    "You're in. Welcome to Miller Journal.";
 
 
-// ---------------------------------------------------------
-// READING PROGRESS
-// ---------------------------------------------------------
-
-function updateScrollUI() {
-
-    const scrollTop =
-        window.scrollY;
-
-    const documentHeight =
-        document.documentElement
-            .scrollHeight -
-        window.innerHeight;
+                newsletterForm.reset();
 
 
-    if (readingProgress) {
+                setTimeout(
+                    () => {
 
-        const progress =
-            documentHeight > 0
-                ? (
-                    scrollTop /
-                    documentHeight
-                ) * 100
-                : 0;
+                        newsletterMessage.textContent =
+                            "";
 
-        readingProgress.style.width =
-            `${progress}%`;
+                    },
+                    5000
+                );
+
+            }
+        );
 
     }
 
+
+    // -----------------------------------------------------
+    // SCROLL UI
+    // -----------------------------------------------------
+
+    function updateScrollUI() {
+
+        const scrollTop =
+            window.scrollY ||
+            document.documentElement
+                .scrollTop;
+
+
+        const scrollableHeight =
+            document.documentElement
+                .scrollHeight -
+            window.innerHeight;
+
+
+        if (readingProgress) {
+
+            const percent =
+                scrollableHeight > 0
+                    ? (
+                        scrollTop /
+                        scrollableHeight
+                    ) * 100
+                    : 0;
+
+
+            readingProgress.style.width =
+                `${percent}%`;
+
+        }
+
+
+        if (backToTop) {
+
+            backToTop.classList.toggle(
+                "visible",
+                scrollTop > 500
+            );
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateScrollUI,
+        {
+            passive: true
+        }
+    );
+
+
+    updateScrollUI();
+
+
+    // -----------------------------------------------------
+    // BACK TO TOP
+    // -----------------------------------------------------
 
     if (backToTop) {
 
-        backToTop.classList.toggle(
-            "visible",
-            scrollTop > 600
+        backToTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+
+            }
         );
 
     }
 
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateScrollUI,
-    { passive: true }
-);
-
-
-updateScrollUI();
-
-
-// ---------------------------------------------------------
-// BACK TO TOP
-// ---------------------------------------------------------
-
-if (backToTop) {
-
-    backToTop.addEventListener(
-        "click",
-        () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        }
-    );
-
-}
+});
